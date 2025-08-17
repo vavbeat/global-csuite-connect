@@ -1,0 +1,2 @@
+This file is created to trigger a new deployment to GitHub Pages.
+Deployment timestamp: 17.08.2025, 8:35 PM (Europe/Moscow, UTC+3:00)
