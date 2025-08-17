@@ -21,22 +21,19 @@
     <meta name="twitter:image" content="./affort-hero.jpg" />
     
     <script>
-      // Handle GitHub Pages SPA routing
-      (function() {
-        var location = window.location;
-        var path = location.pathname;
-        
-        // Check if we're on GitHub Pages and have a query parameter from 404 redirect
-        if (location.hostname.indexOf('github.io') > -1 && location.search) {
-          var params = new URLSearchParams(location.search);
-          var redirectPath = params.get('p');
-          
-          if (redirectPath) {
-            // Replace the current history entry to clean up the URL
-            history.replaceState(null, null, '/global-csuite-connect' + redirectPath + location.hash);
-          }
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
         }
-      })();
+      }(window.location))
     </script>
   </head>
 
