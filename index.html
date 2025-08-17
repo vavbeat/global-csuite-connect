@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-  <html lang="ru" class="dark">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>AFFORT — Международные бизнес‑миссии для C‑suite</title>
-      <meta name="description" content="AFFORT: международные бизнес‑миссии под ключ для российских корпораций. Аналитика рынков, организация визитов, обучение, VIP‑сервис." />
-      <link rel="canonical" href="https://affort.ru/" />
+<html lang="ru" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFFORT — Международные бизнес‑миссии для C‑suite</title>
+    <meta name="description" content="AFFORT: международные бизнес‑миссии под ключ для российских корпораций. Аналитика рынков, организация визитов, обучение, VIP‑сервис." />
+    <link rel="canonical" href="https://affort.ru/" />
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-      <meta property="og:title" content="AFFORT — Международные бизнес‑миссии для C‑suite" />
-      <meta property="og:description" content="Аналитика + организация + обучение + VIP‑сервис: быстрые инсайты и стратегические партнёрства для C‑level." />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="./affort-hero.jpg" />
+    <meta property="og:title" content="AFFORT — Международные бизнес‑миссии для C‑suite" />
+    <meta property="og:description" content="Аналитика + организация + обучение + VIP‑сервис: быстрые инсайты и стратегические партнёрства для C‑level." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./affort-hero.jpg" />
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@affort" />
-      <meta name="twitter:image" content="./affort-hero.jpg" />
-    </head>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@affort" />
+    <meta name="twitter:image" content="./affort-hero.jpg" />
+    
+    <script>
+      // Handle GitHub Pages SPA routing
+      (function() {
+        var location = window.location;
+        var path = location.pathname;
+        
+        // Check if we're on GitHub Pages and have a query parameter from 404 redirect
+        if (location.hostname.indexOf('github.io') > -1 && location.search) {
+          var params = new URLSearchParams(location.search);
+          var redirectPath = params.get('p');
+          
+          if (redirectPath) {
+            // Replace the current history entry to clean up the URL
+            history.replaceState(null, null, '/global-csuite-connect' + redirectPath + location.hash);
+          }
+        }
+      })();
+    </script>
+  </head>
 
   <body>
     <div id="root"></div>
